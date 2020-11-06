@@ -1,10 +1,11 @@
-FROM jupyter/minimal-notebook
+FROM jupyter/scipy-notebook
 
 LABEL maintainer="Ocean <hello@ocean.dev>"
 
 USER $NB_UID
 
-RUN pip install --quiet --no-cache-dir ray && \
+RUN pip install --quiet --no-cache-dir \
+    ray 'tensorflow==2.3.1' && \
     conda clean --all -f -y && \
     npm cache clean --force && \
     rm -rf "/home/${NB_USER}/.cache/yarn" && \
