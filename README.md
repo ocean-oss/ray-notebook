@@ -4,4 +4,4 @@
 
 # Ray Notebook
 
-This Jupyter stack sets up Ray and configures Jupyter to interact with it.
+This Jupyter stack sets up Ray with Tensorflow and configures Jupyter to interact with it.
